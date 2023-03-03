@@ -28,9 +28,9 @@ def chatbot():
 
         formatted_response = format_response(bot_response)
         response_list.append({"user": "Bot", "message": formatted_response})
-        return render_template("chatbot.html", response_list=response_list)
+        return render_template("chatbot.j2", response_list=response_list)
 
-    return render_template("chatbot.html", response_list=response_list)
+    return render_template("chatbot.j2", response_list=response_list)
 
 if __name__ == '__main__':
     app.run(debug=True)

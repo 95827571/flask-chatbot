@@ -13,7 +13,7 @@
                 {% for answer in response_list %}
                     <script type="text/javascript">
                         // createDiv("{{answer.user}}", "{{answer.message}}", "{{loop.index0}}");
-                        createDiv({{answer|tojson}}, {{loop.index0}});
+                        createDiv({{answer|tojson}}, {{loop.index0}}, {{response_list|length}});
                     </script>
                 {% endfor %}
             </div>
