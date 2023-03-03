@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(99, 99, 99);
+}
+
+p {
+    margin: 0 0;
+}
+
+.nav {
+    list-style-type: none;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 0;
+    margin: 0 0;
+    gap: 10rem;
+}
+
+#chatbox {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+#answerbox {
+    margin-top: 5rem;
+    width: 30rem;
+    background-color: rgb(203, 218, 216);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.user-m-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 1rem;
+}
+
+
+.bot-m-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.user-m-wrapper > p {
+    margin-right: 0.3rem;
+    text-align: right;
+}
+
+.message-user-title {
+    font-size: 0.8rem;
+}
+
+.bot-m-wrapper > p {
+    margin-left: 0.3rem;
+    text-align: left;
+}
+
+.msg-wrapper {
+    width: 100%;
+}
+
+.message-box {
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 35rem;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message {
+    min-height: 2rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    max-width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-text {
+    font-size: 0.9rem;
+}
+
+.user-msg {
+    background-color: #5ccb0c;
+}
+
+.user-msg > p {
+    text-align: right;
+}
+
+.bot-msg {
+    background-color: #43c1eb;
+}
+
+.bot-msg > p {
+    text-align: left;
+}
+
+#questionbox {
+    width: 100%;
+    height: 4rem;
+}
+
+#userinput-box {
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(219, 236, 234) !important;
+    border: 0px !important;
+    padding: 0px 1rem;
+}
+
+#userinput-box:focus-visible {
+    outline: 0px;
+}

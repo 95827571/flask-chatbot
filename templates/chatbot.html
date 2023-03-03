@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Main Page</title>
+    {% endblock %}
+  <body class="text-center">
+    
+    {% block content %}
+    
+    <div id="chatbox" class="card text-center">
+        <div id="answerbox">
+            <div id="message-holder" class="message-box">
+                <script src="../static/scripts/chatbot.js" ></script>
+                {% for answer in response_list %}
+                    <script type="text/javascript">
+                        // createDiv("{{answer.user}}", "{{answer.message}}", "{{loop.index0}}");
+                        createDiv({{answer|tojson}}, {{loop.index0}});
+                    </script>
+                {% endfor %}
+            </div>
+            <form role="form" method='POST' action='/chatbot' class="">
+                <div class="form-group text-center" id="questionbox">
+                    <input type="text" name="message" class="" id="userinput-box" placeholder="Send message" autofocus required>
+                </div>
+                <button type="submit" style="display: none" class="btn btn-default">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    
+  </body>
+</html>
