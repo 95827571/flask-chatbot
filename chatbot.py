@@ -15,7 +15,7 @@ classes = pickle.load(open('classes.pk1', 'rb'))
 
 model = tf.keras.models.load_model("chatbot_model.model")
 
-def clean_up_sentence(sentence: str) -> list[str]:
+def clean_up_sentence(sentence: str):
     sentence_words = word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
     return sentence_words
